@@ -50,6 +50,14 @@ All routers run **Arista cEOS** using image `ceos:4.35.0F`, with startup configs
 Actual links are defined in the topology YAML.
 ![Topology](arista-ceos-sr-mpls-topo.png)
 
+### Topology Highlights
+
+- Core underlay: IS-IS Level-2, Area 49.0001
+- BGP AS 65100 (core), route-reflector = R1/R2
+- SRGB 400000–410000, explicit paths enabled (Default to Arista cEOS)
+- BGP EVPN + MPLS data-plane
+- Two remote sites (R8/R9) in separate AS (65001 / 65000)
+- VLAN-aware bundle for inter-site L2 (R7 to R10 via R4 and R5)
 
 ## Usage
 ### 1. Clone repository
