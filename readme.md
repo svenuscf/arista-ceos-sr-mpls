@@ -48,9 +48,7 @@ All routers run **Arista cEOS** using image `ceos:4.35.0F`, with startup configs
 ### Link layout
 
 Actual links are defined in the topology YAML.
-```
-arista-ceos-sr-mpls-topo.png 
-```
+![arista-ceos-sr-mpls-topo.png](Topology)
 
 
 ## Usage
