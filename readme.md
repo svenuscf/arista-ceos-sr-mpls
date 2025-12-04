@@ -63,7 +63,7 @@ Actual links are defined in the topology YAML.
 ### 1. Clone repository
 
 ```
-git clone https://github.com/svenuscf/ceos-sr-mpls.git
+git clone https://github.com/svenuscf/arista-ceos-sr-mpls.git
 
 cd ceos-sr-mpls
 ```
@@ -82,7 +82,7 @@ docker exec -it clab-ceos-sr-mpls-r1 Cli
 
 (Replace r1 with any node r1–r10.)
 
-or if you have configure routes to your internal network, you can directly SSH to the router management IP address.
+or if you have configured routes to your internal network, you can SSH directly to the router management IP address.
 For example:
 ```
 ssh admin@172.100.100.11
