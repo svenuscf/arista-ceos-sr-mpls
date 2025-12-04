@@ -116,6 +116,6 @@ This lab offers a clean SR-MPLS playground suitable for **DC backbone, SP core, 
 
 ## Author
 
-**Gary Wong (Chun-Fung Wong)**
-Principal Architect | CCIE x3 #8256 | CISSP
-GitHub: https://github.com/svenuscf
+**Gary Wong (Chun-Fung Wong)**  
+Principal Architect | CCIE x3 #8256 | CISSP  
+GitHub: https://github.com/svenuscf  
