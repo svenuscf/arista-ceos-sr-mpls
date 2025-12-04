@@ -1,0 +1,143 @@
+name: ceos-sr-mpls
+mgmt:
+  network: ceos-mgmt       # name of mgmt network
+  ipv4-subnet: 172.100.100.0/24
+
+topology:
+  nodes:
+    r1:
+      kind: arista_ceos
+      image: ceos:4.35.0F
+      startup-config: configs/r1.cfg
+      mgmt-ipv4: 172.100.100.11
+      env:
+        CLAB_MGMT_VRF: "mgmt"
+        EOS_PLATFORM: "ceoslab"
+        ETBA: "1"
+        USERNAME: admin
+        PASSWORD: admin
+
+    r2:
+      kind: arista_ceos
+      image: ceos:4.35.0F
+      startup-config: configs/r2.cfg
+      mgmt-ipv4: 172.100.100.12
+      env:
+        CLAB_MGMT_VRF: "mgmt"
+        EOS_PLATFORM: "ceoslab"
+        ETBA: "1"
+        USERNAME: admin
+        PASSWORD: admin
+
+    r3:
+      kind: arista_ceos
+      image: ceos:4.35.0F
+      startup-config: configs/r3.cfg
+      mgmt-ipv4: 172.100.100.13
+      env:
+        CLAB_MGMT_VRF: "mgmt"
+        EOS_PLATFORM: "ceoslab"
+        ETBA: "1"
+        USERNAME: admin
+        PASSWORD: admin
+
+    r4:
+      kind: arista_ceos
+      image: ceos:4.35.0F
+      startup-config: configs/r4.cfg
+      mgmt-ipv4: 172.100.100.14
+      env:
+        CLAB_MGMT_VRF: "mgmt"
+        EOS_PLATFORM: "ceoslab"
+        ETBA: "1"
+        USERNAME: admin
+        PASSWORD: admin
+
+    r5:
+      kind: arista_ceos
+      image: ceos:4.35.0F
+      startup-config: configs/r5.cfg
+      mgmt-ipv4: 172.100.100.15
+      env:
+        CLAB_MGMT_VRF: "mgmt"
+        EOS_PLATFORM: "ceoslab"
+        ETBA: "1"
+        USERNAME: admin
+        PASSWORD: admin
+
+    r6:
+      kind: arista_ceos
+      image: ceos:4.35.0F
+      startup-config: configs/r6.cfg
+      mgmt-ipv4: 172.100.100.16
+      env:
+        CLAB_MGMT_VRF: "mgmt"
+        EOS_PLATFORM: "ceoslab"
+        ETBA: "1"
+        USERNAME: admin
+        PASSWORD: admin
+
+    r7:
+      kind: arista_ceos
+      image: ceos:4.35.0F
+      startup-config: configs/r7.cfg
+      mgmt-ipv4: 172.100.100.17
+      env:
+        CLAB_MGMT_VRF: "mgmt"
+        EOS_PLATFORM: "ceoslab"
+        ETBA: "1"
+        USERNAME: admin
+        PASSWORD: admin
+
+    r8:
+      kind: arista_ceos
+      image: ceos:4.35.0F
+      startup-config: configs/r8.cfg
+      mgmt-ipv4: 172.100.100.18
+      env:
+        CLAB_MGMT_VRF: "mgmt"
+        EOS_PLATFORM: "ceoslab"
+        ETBA: "1"
+        USERNAME: admin
+        PASSWORD: admin
+
+    r9:
+      kind: arista_ceos
+      image: ceos:4.35.0F
+      startup-config: configs/r9.cfg
+      mgmt-ipv4: 172.100.100.19
+      env:
+        CLAB_MGMT_VRF: "mgmt"
+        EOS_PLATFORM: "ceoslab"
+        ETBA: "1"
+        USERNAME: admin
+        PASSWORD: admin
+
+    r10:
+      kind: arista_ceos
+      image: ceos:4.35.0F
+      startup-config: configs/r10.cfg
+      mgmt-ipv4: 172.100.100.20
+      env:
+        CLAB_MGMT_VRF: "mgmt"
+        EOS_PLATFORM: "ceoslab"
+        ETBA: "1"
+        USERNAME: admin
+        PASSWORD: admin
+
+  links:
+    - endpoints: ["r1:eth1", "r2:eth1"]
+    - endpoints: ["r1:eth2", "r6:eth3"]
+    - endpoints: ["r1:eth3", "r3:eth3"]
+    - endpoints: ["r1:eth4", "r9:eth1"]
+    - endpoints: ["r2:eth2", "r4:eth3"]
+    - endpoints: ["r2:eth3", "r5:eth3"]
+    - endpoints: ["r2:eth4", "r9:eth2"]
+    - endpoints: ["r3:eth1", "r4:eth1"]
+    - endpoints: ["r3:eth2", "r6:eth2"]
+    - endpoints: ["r3:eth4", "r8:eth1"]
+    - endpoints: ["r4:eth2", "r5:eth2"]
+    - endpoints: ["r4:eth4", "r10:eth1"]
+    - endpoints: ["r5:eth1", "r6:eth1"]
+    - endpoints: ["r5:eth4", "r7:eth1"]
+
